@@ -1,11 +1,11 @@
 <template>
   <section class="section-header">
     <div>
-      <img
+      <!-- <img
         src="../assets/img/P_20230228_112634.jpg"
         alt="profile-picture"
         class="profile-picture"
-      />
+      /> -->
     </div>
     <div>
       <h2 class="name">{{ name }}</h2>
@@ -25,15 +25,15 @@
           <ion-icon name="mail-outline"></ion-icon>
           <p>email：{{ email }}</p>
         </li>
-        <li class="info-list">
+        <li class="info-list-a">
           <ion-icon name="logo-linkedin"></ion-icon>
           <a :href="linkedin" class="linkedin-link">LinkedIn</a>
         </li>
-        <li class="info-list">
+        <li class="info-list-a">
           <ion-icon name="logo-facebook"></ion-icon>
           <a :href="facebook" class="facebook-link">Facebook</a>
         </li>
-        <li class="info-list">
+        <li class="info-list-a">
           <ion-icon name="logo-github"></ion-icon>
           <a :href="github" class="github-link">GitHub</a>
         </li>
@@ -59,8 +59,9 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .section-header {
+  color: #fff;
   max-width: 150rem;
   margin: 5rem auto 0 auto;
   padding: 2rem;
@@ -69,7 +70,8 @@ export default {
   justify-items: center;
   align-items: center;
   border-radius: 15px 15px 0 0;
-  background-color: #d0ebff;
+  background-color: #1c7ed6;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .name {
@@ -84,6 +86,8 @@ export default {
   display: grid;
   grid-template-columns: 1fr;
   gap: 0.8rem;
+  list-style-type: none;
+  font-size: 1.6rem;
 }
 
 .info-list {
@@ -93,11 +97,17 @@ export default {
   font-weight: 600;
 }
 
+.info-list-a {
+  display: flex;
+  gap: 0.5rem;
+  font-weight: 600;
+}
+
 .linkedin-link,
 .facebook-link,
 .github-link {
   text-decoration: none;
-  color: #212529;
+  color: #fff;
 }
 
 .profile-picture {
@@ -105,10 +115,5 @@ export default {
   height: 20rem;
   border-radius: 50%;
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
-}
-
-.personal-info {
-  list-style-type: none;
-  font-size: 1.6rem;
 }
 </style>

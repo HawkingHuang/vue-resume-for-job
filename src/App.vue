@@ -33,6 +33,6 @@ html {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #212529;
-  margin-top: 60px;
+  margin-top: 3rem;
 }
 </style>
